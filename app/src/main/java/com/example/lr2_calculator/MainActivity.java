@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         n2 = Double.parseDouble(number2.getText().toString());
 
         char_operation.setText("-");
+
         result_number = n1 - n2;
 
         result.setText(Double.toString(result_number));
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(n2 == 0)
         {
-            result.setText("Ошибка: Деление на ноль");
+            result.setText("Ошибка:\n Деление\n на\n ноль");
         }
         else {
             result_number = n1 / n2;
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         number1.setText(" ");
         number2.setText(" ");
         result.setText(" ");
+        char_operation.setText(" ");
     }
 
 }
