@@ -6,39 +6,45 @@
     android:layout_height="match_parent"
     android:layout_rowSpan="2"
     android:layout_columnSpan="2"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView_fio"
-        android:layout_width="200dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="222dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="50dp"
         android:text="Казунина Софья Т-303901 ИСиТ"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="67dp"
+        android:layout_width="340dp"
+        android:layout_height="390dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_fio">
+        app:layout_constraintTop_toBottomOf="@+id/textView_fio"
+        app:layout_constraintVertical_bias="0.13999999">
 
         <Button
             android:id="@+id/button_plus"
-            android:layout_width="74dp"
-            android:layout_height="97dp"
+            android:layout_width="71dp"
+            android:layout_height="118dp"
+            android:layout_margin="5dp"
+            android:backgroundTint="#8BC34A"
             android:onClick="Onclick_button_sum"
             android:text="+"
+            android:textSize="24sp"
             app:layout_column="0"
             app:layout_columnSpan="0"
             app:layout_row="1"
@@ -46,28 +52,37 @@
 
         <Button
             android:id="@+id/button_minus"
-            android:layout_width="wrap_content"
+            android:layout_width="121dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#8BC34A"
             android:onClick="Onclick_button_minus"
             android:text="-"
+            android:textSize="24sp"
             app:layout_column="1"
             app:layout_row="1" />
 
         <Button
             android:id="@+id/button_del"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#8BC34A"
             android:onClick="Onclick_button_del"
             android:text="/"
+            android:textSize="24sp"
             app:layout_column="2"
             app:layout_row="1" />
 
         <Button
             android:id="@+id/button_multi"
-            android:layout_width="174dp"
+            android:layout_width="254dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#8BC34A"
             android:onClick="Onclick_button_multi"
             android:text="*"
+            android:textSize="24sp"
             app:layout_column="1"
             app:layout_columnSpan="2"
             app:layout_row="2"
@@ -75,9 +90,12 @@
 
         <Button
             android:id="@+id/button_clear"
-            android:layout_width="251dp"
+            android:layout_width="334dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="#80144C"
+            android:onClick="Onclick_button_clear"
             android:text="C"
+            android:textSize="24sp"
             app:layout_column="0"
             app:layout_columnSpan="3"
             app:layout_row="4"
@@ -89,7 +107,7 @@
             android:layout_height="58dp"
             android:ems="10"
             android:inputType="number"
-            android:textSize="20sp"
+            android:textSize="24sp"
             app:layout_column="0"
             app:layout_row="0" />
 
@@ -97,18 +115,21 @@
             android:id="@+id/textView2_operation"
             android:layout_width="32dp"
             android:layout_height="28dp"
+            android:layout_marginLeft="10dp"
             android:text=" "
-            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textSize="24sp"
             app:layout_column="1"
             app:layout_row="0" />
 
         <EditText
             android:id="@+id/editTextNumber2"
-            android:layout_width="77dp"
+            android:layout_width="67dp"
             android:layout_height="62dp"
+            android:layout_marginLeft="60dp"
             android:ems="10"
             android:inputType="number"
-            android:textSize="20sp"
+            android:textSize="24sp"
             app:layout_column="1"
             app:layout_row="0" />
 
@@ -117,7 +138,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="="
-            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textSize="24sp"
             app:layout_column="2"
             app:layout_row="0" />
 
@@ -125,8 +147,10 @@
             android:id="@+id/textView_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:text=" "
-            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textSize="24sp"
             app:layout_column="2"
             app:layout_row="0" />
     </androidx.gridlayout.widget.GridLayout>

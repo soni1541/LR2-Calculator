@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     EditText number1;
     EditText number2;
 
+
+
     TextView result;
 
     @Override
@@ -23,15 +25,19 @@ public class MainActivity extends AppCompatActivity {
         number1 = findViewById(R.id.editTextNumber1);
         number2 = findViewById(R.id.editTextNumber2);
         result = findViewById(R.id.textView_result);
+
+
     }
 
     public void Onclick_button_sum(View view) {
+        double result_number;
+        double n1;
+        double n2;
+
+        n1 = Double.parseDouble(number1.getText().toString());
+        n2 = Double.parseDouble(number2.getText().toString());
 
         char_operation.setText("+");
-
-        double result_number;
-        double n1 = Double.parseDouble(number1.getText().toString());
-        double n2 = Double.parseDouble(number2.getText().toString());
 
         result_number = n1 + n2;
 
@@ -39,13 +45,60 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void Onclick_button_minus(View view) {
+        double result_number;
+        double n1;
+        double n2;
+
+        n1 = Double.parseDouble(number1.getText().toString());
+        n2 = Double.parseDouble(number2.getText().toString());
+
         char_operation.setText("-");
+        result_number = n1 - n2;
+
+        result.setText(Double.toString(result_number));
     }
     public void Onclick_button_del(View view) {
+        double result_number;
+        double n1;
+        double n2;
+
+        n1 = Double.parseDouble(number1.getText().toString());
+        n2 = Double.parseDouble(number2.getText().toString());
+
         char_operation.setText("/");
+
+        if(n2 == 0)
+        {
+            result.setText("Ошибка: Деление на ноль");
+        }
+        else {
+            result_number = n1 / n2;
+
+            result.setText(Double.toString(result_number));
+        }
+
+
     }
     public void Onclick_button_multi(View view) {
+        double result_number;
+        double n1;
+        double n2;
+
+        n1 = Double.parseDouble(number1.getText().toString());
+        n2 = Double.parseDouble(number2.getText().toString());
+
+        result_number = n1 * n2;
+
+        result.setText(Double.toString(result_number));
+
+
         char_operation.setText("*");
+    }
+
+    public void Onclick_button_clear(View view) {
+        number1.setText(" ");
+        number2.setText(" ");
+        result.setText(" ");
     }
 
 }
